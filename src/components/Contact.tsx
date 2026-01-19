@@ -29,10 +29,10 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center animate-fadeInUp">
           Get In Touch
         </h2>
-        <p className="text-lg text-gray-600 text-center mb-16">
+        <p className="text-lg text-gray-600 text-center mb-16 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           Have a project in mind or want to collaborate? Feel free to reach out!
         </p>
 
@@ -141,7 +141,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center gap-2"
+                className="button-hover w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 font-medium flex items-center justify-center gap-2"
               >
                 <Send size={18} />
                 Send Message

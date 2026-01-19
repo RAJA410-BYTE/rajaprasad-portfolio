@@ -32,10 +32,10 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center animate-fadeInUp">
           Featured Projects
         </h2>
-        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           A selection of projects showcasing my skills in full stack development,
           problem-solving, and creating user-friendly applications.
         </p>
@@ -44,7 +44,8 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
               <div className="p-8">

@@ -35,10 +35,10 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center animate-fadeInUp">
           Experience & Leadership
         </h2>
-        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           Hands-on development experience combined with a passion for teaching
           and leading collaborative projects.
         </p>
@@ -49,7 +49,8 @@ export default function Experience() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="experience-item bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fadeInUp"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="p-3 bg-blue-50 rounded-lg text-blue-600 flex-shrink-0">

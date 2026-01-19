@@ -51,10 +51,10 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center animate-fadeInUp">
           Skills & Technologies
         </h2>
-        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           A comprehensive toolkit for building modern, scalable web applications
           from frontend to backend.
         </p>
@@ -79,7 +79,8 @@ export default function Skills() {
                   {category.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-200 hover:scale-105 ${getColorClasses(category.color)}`}
+                      className={`skill-badge px-4 py-2 rounded-lg border-2 font-medium ${getColorClasses(category.color)}`}
+                      style={{ animationDelay: `${skillIndex * 0.05}s` }}
                     >
                       {skill}
                     </span>
