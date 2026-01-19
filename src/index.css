@@ -154,3 +154,102 @@ html {
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
+
+@keyframes flowDown {
+  0% {
+    transform: translateY(-100vh) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(30px);
+    opacity: 0;
+  }
+}
+
+@keyframes flowDown2 {
+  0% {
+    transform: translateY(-100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(-40px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flowDown3 {
+  0% {
+    transform: translateY(-100vh) translateX(0px) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+.flowing-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.flowing-element {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.2));
+}
+
+.flowing-1 {
+  animation: flowDown 8s linear infinite;
+}
+
+.flowing-2 {
+  animation: flowDown2 10s linear infinite;
+}
+
+.flowing-3 {
+  animation: flowDown3 12s linear infinite;
+}
+
+.flowing-wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
