@@ -253,3 +253,65 @@ main {
   position: relative;
   z-index: 2;
 }
+
+@layer base {
+  .dark {
+    color-scheme: dark;
+  }
+
+  html.dark {
+    @apply bg-gray-950 text-white;
+  }
+}
+
+@layer components {
+  .color-blue {
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --primary-dark: #1d4ed8;
+  }
+
+  .color-emerald {
+    --primary: #059669;
+    --primary-light: #10b981;
+    --primary-dark: #047857;
+  }
+
+  .color-rose {
+    --primary: #e11d48;
+    --primary-light: #f43f5e;
+    --primary-dark: #be185d;
+  }
+
+  .color-amber {
+    --primary: #d97706;
+    --primary-light: #f59e0b;
+    --primary-dark: #b45309;
+  }
+
+  .color-cyan {
+    --primary: #0891b2;
+    --primary-light: #06b6d4;
+    --primary-dark: #0e7490;
+  }
+
+  .dark-bg-primary {
+    @apply dark:bg-gray-900;
+  }
+
+  .dark-bg-secondary {
+    @apply dark:bg-gray-800;
+  }
+
+  .dark-text-primary {
+    @apply dark:text-white;
+  }
+
+  .dark-text-secondary {
+    @apply dark:text-gray-300;
+  }
+
+  .dark-border {
+    @apply dark:border-gray-700;
+  }
+}

@@ -30,12 +30,12 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-6 bg-gray-50">
+    <section id="projects" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center animate-fadeInUp">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center animate-fadeInUp">
           Featured Projects
         </h2>
-        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+        <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-16 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           A selection of projects showcasing my skills in full stack development,
           problem-solving, and creating user-friendly applications.
         </p>
@@ -44,22 +44,22 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+              className="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-medium"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -71,7 +71,7 @@ export default function Projects() {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                      className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
                     >
                       <ExternalLink size={18} />
                       Live Demo
@@ -79,7 +79,7 @@ export default function Projects() {
                   )}
                   <a
                     href="#contact"
-                    className="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium transition-colors"
+                    className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium transition-colors"
                   >
                     <Github size={18} />
                     View Code
