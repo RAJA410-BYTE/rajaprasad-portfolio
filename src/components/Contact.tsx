@@ -27,21 +27,21 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-white">
+    <section id="contact" className="py-20 px-6 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center animate-fadeInUp">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center animate-fadeInUp">
           Get In Touch
         </h2>
-        <p className="text-lg text-gray-600 text-center mb-16 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+        <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-16 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           Have a project in mind or want to collaborate? Feel free to reach out!
         </p>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Let's Connect
             </h3>
-            <p className="text-gray-700 mb-8 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
               I'm always interested in hearing about new projects, opportunities,
               or just having a chat about technology and development.
             </p>
@@ -49,10 +49,10 @@ export default function Contact() {
             <div className="space-y-4">
               <a
                 href="mailto:raja@example.com"
-                className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors group"
+                className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
-                <div className="p-3 bg-gray-100 rounded-lg group-hover:bg-blue-50 transition-colors">
-                  <Mail size={20} className="text-gray-600 group-hover:text-blue-600" />
+                <div className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg group-hover:bg-blue-50 dark:group-hover:bg-blue-900 transition-colors">
+                  <Mail size={20} className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400" />
                 </div>
                 <span className="font-medium">raja@example.com</span>
               </a>
@@ -61,10 +61,10 @@ export default function Contact() {
                 href="https://github.com/rajaprasad"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors group"
+                className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
-                <div className="p-3 bg-gray-100 rounded-lg group-hover:bg-blue-50 transition-colors">
-                  <Github size={20} className="text-gray-600 group-hover:text-blue-600" />
+                <div className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg group-hover:bg-blue-50 dark:group-hover:bg-blue-900 transition-colors">
+                  <Github size={20} className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400" />
                 </div>
                 <span className="font-medium">github.com/rajaprasad</span>
               </a>
@@ -73,10 +73,10 @@ export default function Contact() {
                 href="https://linkedin.com/in/rajaprasad"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors group"
+                className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
-                <div className="p-3 bg-gray-100 rounded-lg group-hover:bg-blue-50 transition-colors">
-                  <Linkedin size={20} className="text-gray-600 group-hover:text-blue-600" />
+                <div className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg group-hover:bg-blue-50 dark:group-hover:bg-blue-900 transition-colors">
+                  <Linkedin size={20} className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400" />
                 </div>
                 <span className="font-medium">linkedin.com/in/rajaprasad</span>
               </a>
@@ -86,7 +86,7 @@ export default function Contact() {
           <div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Name
                 </label>
                 <input
@@ -96,13 +96,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Email
                 </label>
                 <input
@@ -112,13 +112,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
@@ -128,13 +128,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               {status === 'success' && (
-                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg">
+                <div className="bg-green-50 dark:bg-green-900 border border-green-200 dark:border-green-700 text-green-700 dark:text-green-300 px-4 py-3 rounded-lg">
                   Message sent successfully! I'll get back to you soon.
                 </div>
               )}

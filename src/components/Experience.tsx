@@ -33,12 +33,12 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-6 bg-gray-50">
+    <section id="experience" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center animate-fadeInUp">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center animate-fadeInUp">
           Experience & Leadership
         </h2>
-        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+        <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-16 max-w-2xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           Hands-on development experience combined with a passion for teaching
           and leading collaborative projects.
         </p>
@@ -49,30 +49,30 @@ export default function Experience() {
             return (
               <div
                 key={index}
-                className="experience-item bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fadeInUp"
+                className="experience-item bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fadeInUp"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-blue-50 rounded-lg text-blue-600 flex-shrink-0">
+                  <div className="p-3 bg-blue-50 dark:bg-blue-900 rounded-lg text-blue-600 dark:text-blue-400 flex-shrink-0">
                     <Icon size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                       {exp.title}
                     </h3>
-                    <p className="text-blue-600 font-medium">
+                    <p className="text-blue-600 dark:text-blue-400 font-medium">
                       {exp.organization}
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   {exp.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {exp.highlights.map((highlight, hIndex) => (
                     <span
                       key={hIndex}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-medium"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full font-medium"
                     >
                       {highlight}
                     </span>
